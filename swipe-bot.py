@@ -62,7 +62,7 @@ class TinderBot():
                     self.like()
                     self.right_count = self.right_count +1
                     print('{}th rightswipe'.format(self.right_count))
-                    if self.right_count % 10 == 0:
+                    if self.right_count % 100 == 0:
                         sleep(43284)
                 else:
                     self.dislike()
