@@ -30,7 +30,10 @@ class TinderBot():
 
         self.driver.switch_to_window(base_window)
 
-        sleep(5)
+        popup_3 = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[2]/div/div/div[1]/button')
+        popup_3.click()
+
+        sleep(3)
         popup_1 = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]') #//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
         popup_1.click()
 
