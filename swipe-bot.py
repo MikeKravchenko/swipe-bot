@@ -65,6 +65,7 @@ class TinderBot():
                     self.like()
                     self.right_count = self.right_count +1
                     print('{}th rightswipe'.format(self.right_count))
+                    # delete this if you have paid version
                     if self.right_count % 100 == 0:
                         sleep(43284)
                 else:
