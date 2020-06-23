@@ -1,8 +1,8 @@
 from selenium import webdriver
 from time import sleep
+import sys
 
 from secrets import username, password
-
 class TinderBot():
     def __init__(self):
         self.driver = webdriver.Chrome()
@@ -27,20 +27,23 @@ class TinderBot():
 
         login_btn = self.driver.find_element_by_xpath('//*[@id="u_0_0"]')
         login_btn.click()
+        sleep(2)
 
         self.driver.switch_to_window(base_window)
 
         popup_3 = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[2]/div/div/div[1]/button')
         popup_3.click()
+        sleep(2)
 
         sleep(3)
         popup_1 = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]') #//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
         popup_1.click()
+        sleep(2)
 
         sleep(3)
         popup_2 = self.driver.find_element_by_xpath('//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
         popup_2.click()
-        sleep(1)
+        sleep(2)
 
     def like(self):
         like_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/main/div[1]/div/div/div[1]/div/div[2]/div[4]/button')
@@ -67,7 +70,11 @@ class TinderBot():
                     print('{}th rightswipe'.format(self.right_count))
                     # delete this if you have paid version
                     if self.right_count % 100 == 0:
-                        sleep(43284)
+                        self.driver.quit()
+                        sys.exit()
+                        # self.driver.close()
+                        # sel.quit()
+                        # sel.close()
                 else:
                     self.dislike()
                     self.left_count = self.left_count +1
