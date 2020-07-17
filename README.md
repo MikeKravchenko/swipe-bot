@@ -21,4 +21,4 @@ And put inside:
 ```
 0 */13 * * * export DISPLAY=:0 && export PATH=$PATH:/usr/local/bin && /usr/bin/python3 /home/mike/git/swipe-bot/swipe-bot.py
 ```
-last path is path to your script directory, and before it path to your python with selenium. 
+last path should be path to your script, and before it you specify path to your python with selenium. 

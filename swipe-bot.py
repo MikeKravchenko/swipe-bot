@@ -64,7 +64,7 @@ class TinderBot():
             if rand > 0.9977: sleep(randint(1,50))
             try:
                 rand = random()
-                if rand < .9667:
+                if rand < .7667:
                     self.like()
                     self.right_count = self.right_count +1
                     print('{}th rightswipe'.format(self.right_count))
