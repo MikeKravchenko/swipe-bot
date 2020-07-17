@@ -1,19 +1,24 @@
 # swipe-bot
 
-to run:
- - download chromedriver, unzip, move to `/usr/local/bin` (mac os / linux)
- - `pip install selenium`
+To make it work:
+1. download chromedriver depend on your Chrome on https://chromedriver.chromium.org/downloads, unzip and move to `/usr/local/bin` (mac os / linux)
 
-create a secrets.py file with variables:
+2.Install selenium on Python3.7+ that you will use:
+``` 
+pip install selenium
+```
+3. create a "secrets.py" file with variables in project directory with your Facebook login:
 ``` 
  username = 'your_username'
  password = 'your_password'
 ```
+Now you can run it.
 
-You can easy add your cron job by:
 
-- 'crontab -e' 
 
-and put insede:
-
-- 0 */13 * * * export DISPLAY=:0 && export PATH=$PATH:/usr/local/bin && /usr/bin/python3 /home/mike/git/swipe-bot/swipe-bot.py
+You can easily add your cron job by on your Ubuntu by run 'crontab -e' in terminal. 
+And put inside:
+```
+0 */13 * * * export DISPLAY=:0 && export PATH=$PATH:/usr/local/bin && /usr/bin/python3 /home/mike/git/swipe-bot/swipe-bot.py
+```
+last path is path to your script directory, and before it path to your python with selenium. 
