@@ -12,7 +12,7 @@ create a secrets.py file with variables:
 
 You can easy add your cron job by:
 
-- 'cron e' 
+- 'crontab -e' 
 
 and put insede:
 
