@@ -16,7 +16,7 @@ You are ready to go!
 
 
 
-You can easily add your cron job by on your Ubuntu by run 'crontab -e' in terminal. 
+You can easily add your cron job on your Ubuntu by run 'crontab -e' in terminal. 
 And put inside:
 ```
 0 */13 * * * export DISPLAY=:0 && export PATH=$PATH:/usr/local/bin && /usr/bin/python3 /path/to/swipe-bot/swipe-bot.py
